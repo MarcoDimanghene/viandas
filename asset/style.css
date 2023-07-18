@@ -16,7 +16,7 @@
     text-transform: capitalize;
     font-family: lato-italic;
     font-size: 16px;
-    transition: all .4s linear;
+    
     color: black;
     max-width: 1400px;
     margin: auto;
@@ -29,7 +29,7 @@
 }
 header nav{
     position: relative;
-    
+    transition: all .4s linear;
 }
 header{
     display: flex;
@@ -94,11 +94,20 @@ section i{
     display: none;
 }
 .card {
-    border: 1px solid black;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
     position: relative;
-    min-width: 125px;
-    min-height: 125px;
+    min-width: 200px;
+    min-height: 200px;
     margin-right: 13px;
-    background-color: #282828;
     cursor: pointer;
+}
+h4 {
+    background: aliceblue;
+    color: black;
+    font-size: 1em;
+}
+.menu {
+    width: 100px;
 }

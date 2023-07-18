@@ -80,4 +80,5 @@ const menuData=[
         img: '/img/lasana.jpg'
     },
 
-]
+];
+//console.log(menuData)
