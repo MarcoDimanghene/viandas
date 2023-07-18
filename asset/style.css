@@ -1,0 +1,104 @@
+@font-face {
+    font-family: lato-regular;
+    src: url(/font/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: lato-italic;
+    src: url(/font/Lato-Italic.ttf);
+}
+
+*{
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    font-family: lato-italic;
+    font-size: 16px;
+    transition: all .4s linear;
+    color: black;
+    max-width: 1400px;
+    margin: auto;
+}
+.hidden{
+    display: none;
+}
+.navar{
+    margin: auto;
+}
+header nav{
+    position: relative;
+    
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 2px solid rgb(61, 85, 61);
+}
+header nav a{
+    padding: 0.2em 0.5em;
+    font-weight:500;
+    font-size: 1.5em;
+    border-radius: 10px;
+}
+header nav a:hover,
+header nav a.active{
+    background-color: rgb(44, 56, 44);
+    color: #fdfdfd;
+}
+header .iconshead i{
+    margin: 0;
+    padding: 0 1em;
+    font-size: 1.8em;
+    color: darkgreen;
+}
+.iconshead{
+    margin: 0;
+}
+header img{
+    height: 6em;
+    min-height: 5em;
+    margin: 0.2em 1em;
+    cursor: pointer;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+section i{
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.cards{
+    width: 90%;
+    height: 240px;
+    position: relative;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1%;
+}
+.cards::-webkit-scrollbar{
+    display: none;
+}
+.card {
+    border: 1px solid black;
+    position: relative;
+    min-width: 125px;
+    min-height: 125px;
+    margin-right: 13px;
+    background-color: #282828;
+    cursor: pointer;
+}
