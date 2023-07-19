@@ -89,6 +89,8 @@ section i{
     align-items: center;
     justify-content: space-between;
     padding: 0 1%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5%;
 }
 .cards::-webkit-scrollbar{
     display: none;
@@ -99,8 +101,8 @@ section i{
     justify-content: center;
     flex-direction: column;
     position: relative;
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 180px;
+    min-height: 180px;
     margin-right: 15px;
     cursor: pointer;
     background-color: #282828;
@@ -108,7 +110,6 @@ section i{
 }
 h4 {
     width: 100%;
-    
     color: #fff;
     font-size: 1em;
     margin: 5px;
@@ -134,28 +135,82 @@ img{
     position: relative;
 }
 button{
-    background-color:rgb(228, 248, 228);
-    width: 70%;
-    color: #080808;
+    background-color:rgb(0, 0, 0);
+    width: 125px;
+    color:#fff;
     cursor: pointer;
+    font-size: 18px;
     padding: 8px;
     margin: 10px ;
-    border-radius: 25px;
+    border-radius: 10px;
+    border: double #fff;
 }
 button:hover{
     background-color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
 }
 .card:hover{
     background-color: #000000;
 }
-
-.contenedor{
+.inicio{
+    display: block;
+    align-items: center;
+}
+.titulos{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aquamarine;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+}
+h1{
+    font-size: 2.5em;
+}
+.imgmenu{
+    margin: 2%;
+    width: 30%;
+    height: auto;
+    grid-column: 1;
+}
+.contenedor{
+    background-color: #fff;
     max-width: 1000px;
     min-width: 1000px;
-    height: 450px;
-    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    
+}
+.contenedorInicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+body{
+    background-color: rgb(185, 224, 180);
+}
+.menutitulo{
+    font-size: 2em;
+    text-align: center;
+}
+.negrita{
+    font-family: "lato-regular";
+    font-weight: bold;
+    font-size: 1em; 
+}
+.txtinicio{
+    width: 70%;
+    color: #000000;
+    text-align: right;
+    font-size: 1.5em;
+    text-align: justify;    
+}
+.precio {
+    font-weight: bold;
+    color: darkred;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 1%;
 }

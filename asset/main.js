@@ -36,7 +36,7 @@ const renderMenu =(menu)=>{
     data-descripcion="${descripcion}" >
         <div class"txtmenu">
             <h4>${name}</h4>
-            <img src="${img}" class="imgmenu selec" alt="${name}" data-id="${id}" 
+            <img src="${img}" class="imgmenu1 selec" alt="${name}" data-id="${id}" 
             data-name="${name}"
             data-precio="${precio}"
             data-img="${img}"
@@ -55,19 +55,22 @@ const renderMenu =(menu)=>{
 const renderInicio = (data)=>{
     const { id, name, precio, img, descripcion, ingredientes } = data;
     return `
-    <div class="contenedorInicio" data-id="${id}">
-    <div class"contMenu">
-        <h2>${name}</h2>
+    <div data-id="${id}">
+        <h2 class="menutitulo">${name}</h2>
+    <div class="contenedorInicio">
         <img src="${img}" class="imgmenu" alt="${name}">
-        <h3>descripción: ${descripcion}</h3>
-        <h3>Ingredientes: ${ingredientes}</h3>
-        <h3>$ ${precio}</h3>
+        <div>
+        <p class="txtinicio"> <spam class="negrita">descripción:</spam> ${descripcion}</p>
+        <p class="txtinicio"> <spam class="negrita">Ingredientes: </spam>${ingredientes}</p>
+        <p class="txtinicio, precio">$ ${precio}</p>
+        </div>
     </div>
-    <button class="btn-add"
+        <button class="btn-add"
         data-id='${id}'
         data-name='${name}'
         data-bid='${precio}'
         data-img='${img}'>Agregar</button>
+    
     </div>`;
     
 };
