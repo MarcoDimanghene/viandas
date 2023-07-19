@@ -65,7 +65,7 @@ const menuData=[
     },
     {
         id:9,
-        name: 'Salmón al Horno con Salsa de Miel y Mostaza',
+        name: 'Salmón con Salsa de Miel',
         descripcion:'Descubre una experiencia culinaria única en nuestro restaurante, donde el Salmón al Horno con Salsa de Miel y Mostaza es la estrella. Un equilibrio perfecto de sabores, frescura y deleite en cada bocado.',
         ingredientes:'Salmon, miel, mostaza dijon, opcional semillas de sesamo y cilantro',
         precio: 3000,
