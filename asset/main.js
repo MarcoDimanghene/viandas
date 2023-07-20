@@ -4,6 +4,10 @@ const right = document.getElementById('right');
 const cards = document.getElementById('cards');
 const inicio = document.getElementById('contenedorInicio');
 const h2inicio= document.getElementById('h2inicio');
+const cartMenu = document.querySelector(".cart");
+const cartBtn = document.getElementById("cartbtn");
+
+
 
 //SCROLL
 const scrollLeft = () => {
@@ -60,19 +64,17 @@ const renderInicio = (data)=>{
     <div class="contenedorInicio">
         <img src="${img}" class="imgmenu" alt="${name}">
         <div>
-        <p class="txtinicio"> <spam class="negrita">descripción:</spam> ${descripcion}</p>
+        <p class="txtinicio"> <spam class="negrita">Descripción:</spam> ${descripcion}</p>
         <p class="txtinicio"> <spam class="negrita">Ingredientes: </spam>${ingredientes}</p>
         <p class="txtinicio, precio">$ ${precio}</p>
-        </div>
-    </div>
         <button class="btn-add"
         data-id='${id}'
         data-name='${name}'
         data-bid='${precio}'
         data-img='${img}'>Agregar</button>
-    
+        </div>
+    </div>
     </div>`;
-    
 };
 const creatDataHome = (id, name, precio, img, ingredientes, descripcion) => {
     return {id, name, precio, img, ingredientes, descripcion};
@@ -90,9 +92,15 @@ const loadHome =(e) => {
     h2inicio.classList.add('hidden')
 };
 
+const toggleCart = () => {
+    cartMenu.classList.toggle("open-cart");
+};
+
+
 const init =() =>{
     displayMenu();
     cards.addEventListener('click', loadHome);
+    cartBtn.addEventListener('click', toggleCart);
 
 }
 init()

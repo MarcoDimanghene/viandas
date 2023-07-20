@@ -18,15 +18,27 @@
             <a href="#order">Ordenar</a>
         </nav>
         <div class="iconshead">
-            <a href=""><i class="fa-solid fa-bars"></i></a>
-            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            <i class="fa-solid fa-bars, hidden"></i>
+            <i class="fa-solid fa-cart-shopping" id="cartbtn"></i>
         </div>
-        
+        <div class="cart">
+            <h2>Tus NFTs</h2>
+    
+            <div class="cart-container"></div>
+    
+            <span class="divider"></span>
+    
+            <div class="cart-total">
+                <p>Total:</p>
+                <span class="total">0.00 ETH</span>
+            </div>
+            <button class="btn-buy">Comprar</button>
+            <button class="btn-delete">Vaciar carrito</button>
+        </div>
     </header>
-
     <section id="inicio" class="inicio">
-        <div class="titulos"><h1>Fresh & Fint</h1>
-            <h2 id="h2inicio">Seleccione el plato para tener mas informacion</h2>
+        <div class="titulos"><h1>Fresh & Fit</h1>
+            <h2 class="subt" id="h2inicio">¡Bienvenidos al restaurante! Seleccione su plato favorito para obtener más información.</h2>
         </div>
         
         <div class="contenedor" id="contenedorInicio">
@@ -34,15 +46,13 @@
         
     </section>
     <section id="menu" class="menu">
-        <div class="contcard">
-        <div class="cards" id="cards">
         
-        </div>
-        <div class="icons">
-            <i id="left" class="fa-solid fa-caret-left"></i>
-            
-            <i id="right" class="fa-solid fa-caret-right"></i>
-        </div>
+        <div class="contcard">
+            <div class="icons">
+                <i id="left" class="fa-solid fa-caret-left"></i>
+                <i id="right" class="fa-solid fa-caret-right"></i>
+            </div>
+            <div class="cards" id="cards"></div>
         </div>
     </section>
     <section id="info" class="info">
