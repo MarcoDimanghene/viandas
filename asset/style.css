@@ -7,6 +7,24 @@
     src: url(/font/Lato-Italic.ttf);
 }
 
+@keyframes animate {
+    20%{
+        background-image: url(/img/backgroundinfo/2.jpg);
+    }
+    40%{
+        background-image: url(/img/backgroundinfo/3.jpg);
+    }
+    60%{
+        background-image: url(/img/backgroundinfo/4.jpg);
+    }
+    80%{
+        background-image: url(/img/backgroundinfo/5.jpg);
+    }
+    100%{
+        background-image: url(/img/backgroundinfo/6.jpg);
+    }
+}
+
 *{
     padding: 0%;
     box-sizing: border-box;
@@ -62,24 +80,56 @@ header img{
     margin: 0.2em 1em;
     cursor: pointer;
 }
+/*----------Info--------*/
+.info{
+    max-width: 1000px;
+    height: 350px;
+    background-image: url(/img/backgroundinfo/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    animation: animate 25s infinite, reverse;
+    border-radius: 25px;
+}
+.info p{
+    font-size: 2em;
+    width: 60%;
+    height: auto;
+    padding: 3%;
+    backdrop-filter: blur(18px);
+    color: #fff;
+    border-radius: 25px;
+}
+h1{
+    font-size: 3em;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    border-radius: 25px 25px 0 0;
+}
+
+/*----------Menu e "ex-inicio"--------*/
 .icons{
     display: flex;
     align-items: center;
     width: 50%;
-    
+    padding: 2%;
 }
-section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-}
+
 section i{
     font-size: 2em;
     cursor: pointer;
 }
 section i:hover{
     color: #fff;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
 }
 .cards{
     width: 80%;
@@ -123,6 +173,7 @@ h3 {
 }
 .menu {
     width: 100px;
+    z-index: 0;
 }
 
 .txtmenu{
@@ -169,9 +220,7 @@ button:hover{
     width: 100%;
     justify-content: center;
 }
-h1{
-    font-size: 2.5em;
-}
+
 .subt{
     font-size: 2em;
     text-align: center;
@@ -202,8 +251,8 @@ h1{
     margin: 5px 20px;
 }
 body{
-    background-color: rgb(185, 224, 180);
-    overflow: hidden;
+    background-color: #fff;
+    overflow-x: hidden;
 }
 .menutitulo{
     font-size: 2em;
@@ -228,24 +277,51 @@ body{
     text-align: center;
     margin: 1%;
 }
+/*----------Seccion Favoritos de la semana ofertas?--------*/
+.fav{
+    height: 400px;
+    max-width: 1200px;
+    background-color: aqua;
+}
+
+/*----------formulario de contacto--------*/
+.contac{
+    height: 400px;
+    max-width: 1200px;
+    background-color: rgb(187, 241, 60);
+}
 
 /* Carrito */ 
 .cart {
     position: absolute;
-    top: 11%;
+    top: 104px;
     right: 0;
-    border-left: 1px solid var(--nav-bg);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: calc(100vh - 65px);
+    height: calc(100vh - 80px);
     overflow-y: scroll;
+    border: 1px solid darkgreen;
     z-index: 2;
-    min-width: 375px;
-    background-color: #121e3c;
+    min-width: 400px;
+    background-color: #ffffff;
     transform: translate(300%);
-    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99); 
+    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+}
+.cart h2{
+    position: relative;
+    top: -100px;
+    font-size: 1.5em;
+}
+.cart-total{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-top: #282828 solid 2px;
+    border-bottom: #282828 solid 2px;
+    margin: 2%;
+    padding: 10%;
 }
 /*Toggle del carro*/
 .open-cart {
