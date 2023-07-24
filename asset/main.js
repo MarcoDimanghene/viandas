@@ -1,4 +1,3 @@
-
 const left = document.getElementById('left');
 const right = document.getElementById('right');
 const cards = document.getElementById('cards');
@@ -24,6 +23,7 @@ const scrollRight = () => {
 };
 left.addEventListener('click',(scrollLeft))
 right.addEventListener('click',scrollRight)
+
 // renderizo el menu en cards
 const displayMenu = () => {
     cards.innerHTML = menuData.map(renderMenu).join("");
@@ -81,12 +81,12 @@ const creatDataHome = (id, name, precio, img, ingredientes, descripcion) => {
     
     
 }
-
+// Cargo el contenedor al ahcer click en la comida-- costo pero se hizo me falto el ; despues del return
 const loadHome =(e) => {
     if (!e.target.classList.contains("selec")) return;
     const {id, name, precio, img, ingredientes, descripcion} = e.target.dataset;
     const produc = creatDataHome(id, name, precio, img, ingredientes, descripcion);
-    console.log(produc)
+    //console.log(produc)
     const renderedProduct = renderInicio(produc);
     inicio.innerHTML = renderedProduct;
     h2inicio.classList.add('hidden')

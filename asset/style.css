@@ -34,7 +34,9 @@
     font-family: lato-italic;
     font-size: 16px;
     color: black;
-    max-width: 1400px;
+    margin: 0;
+}
+section{
     margin: auto;
 }
 .hidden{
@@ -53,6 +55,8 @@ header{
     justify-content: space-between;
     width: 100%;
     border-bottom: 2px solid rgb(61, 85, 61);
+    max-width: 1400px;
+    margin: auto;
 }
 header nav a{
     padding: 0.2em 0.5em;
@@ -91,6 +95,7 @@ header img{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     animation: animate 25s infinite, reverse;
     border-radius: 25px;
+    
 }
 .info p{
     font-size: 2em;
@@ -107,6 +112,7 @@ h1{
     color: #fff;
     background-color: #000;
     border-radius: 25px 25px 0 0;
+    margin-top: 15px;
 }
 
 /*----------Menu e "ex-inicio"--------*/
@@ -115,6 +121,7 @@ h1{
     align-items: center;
     width: 50%;
     padding: 2%;
+    border-top: 1px solid darkgrey;
 }
 
 
@@ -130,6 +137,7 @@ section i:hover{
     align-items: center;
     justify-content: center;
     max-width: 1200px;
+    margin: auto;
 }
 .cards{
     width: 80%;
@@ -142,9 +150,14 @@ section i:hover{
     padding: 0 1%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     border-radius: 5%;
+    margin: auto;
 }
 .cards::-webkit-scrollbar{
     display: none;
+}
+.contcard {
+    max-width: 1200px;
+    margin: auto;
 }
 .card {
     display: flex;
@@ -175,7 +188,10 @@ h3 {
     width: 100px;
     z-index: 0;
 }
-
+.subtmenu{
+    font-size: 1.8em;
+    font-weight: bold;
+}
 .txtmenu{
     margin:auto ;
 }
@@ -193,7 +209,6 @@ button{
     font-size: 18px;
     padding: 8px;
     margin: 10px ;
-    
     border-radius: 25px;
     color: #d7d7d7;
     border: solid 1px #333;
@@ -210,6 +225,8 @@ button:hover{
 .inicio{
     display: block;
     align-items: center;
+    margin: auto;
+    max-width: 1000px;
 }
 .titulos{
     display: flex;
@@ -224,7 +241,7 @@ button:hover{
 .subt{
     font-size: 2em;
     text-align: center;
-    margin: 10%;
+    margin: 5%;
     width: 400px;
 }
 .imgmenu{
@@ -235,7 +252,6 @@ button:hover{
 .contenedor{
     background-color: #fff;
     max-width: 1000px;
-    min-width: 1000px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     
@@ -244,7 +260,8 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    max-width: 1000px;
+    margin: auto;
 }
 .imgmenu1{
     border-radius: 100%;
@@ -257,6 +274,7 @@ body{
 .menutitulo{
     font-size: 2em;
     text-align: center;
+    margin: auto;
 }
 .negrita{
     font-family: "lato-regular";
@@ -277,26 +295,90 @@ body{
     text-align: center;
     margin: 1%;
 }
-/*----------Seccion Favoritos de la semana ofertas?--------*/
-.fav{
-    height: 400px;
-    max-width: 1200px;
-    background-color: aqua;
-    border-radius: 25px;
-}
 
 /*----------formulario de contacto--------*/
 .contac{
-    height: 400px;
     max-width: 1200px;
-    background-color: rgb(187, 241, 60);
+    height: auto;
+}
+.contcontac{
+    display: flex;
+    background-image: url(/img/contacus.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     border-radius: 25px;
+    height: 500px;
+    width: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.continfo{
+    position: relative;
+    display: block;
+    backdrop-filter: blur(18px);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    height: 50%;
+    margin: auto;
+}
+.continfo p{
+    font-size: 1.5em;
+    color: #fff;
+}
+.contac h3{
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 2.5em;
+    margin: 30px 0;
+}
+
+.txtfrm{
+    background-color: #ffffff;
+    color: #000;
+    border-bottom: 2px darkgreen solid;
+    margin: 5px 5px;
+    padding: 1%;
+    font-size: 1.5em;
+}
+.contfrminput{
+    display: flex;
+}
+.btnenviar{
+    width: 125px;
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 8px;
+    margin: 10px ;
+    border-radius: 25px;
+    color: #d7d7d7;
+    border: solid 1px #333;
+    background: #333;
+    background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#000))
+}
+.btnenviar:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#666))
+}
+.social {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 80px;
+    border-left: #000 3px solid;
+    border-right: #000 3px solid;
+    background-color: #fdfdfd;
+}
+.social i:hover {
+    color: darkgreen;
 }
 /*----------Footer--------*/
 footer{
     height: 200px;
-    max-width: 1200px;
-    background-color: rgb(60, 220, 241);
+    width: 100%;
+    border-top: #000 2px solid;
+    margin-top: 20px;
 }
 
 /* Carrito */ 
@@ -316,6 +398,7 @@ footer{
     background-color: #ffffff;
     transform: translate(300%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+    margin: 0;
 }
 .cart h2{
     position: relative;
