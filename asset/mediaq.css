@@ -12,7 +12,9 @@
         max-width: 50em;
         margin: auto;
     }
-    
+    *{
+       margin: auto;
+    }
 }
 /*Tablet*/
 @media (max-width: 768px) {
