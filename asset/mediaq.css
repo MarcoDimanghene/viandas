@@ -1,14 +1,51 @@
 @media (max-width: 992px) {
     *{
-        font-size: 14px;
+        font-size: 15px;
     }
     body{
         width: 100%;
-        min-width: 470px;
-        overflow: hidden;
+    }
+    .menubars{
+        display: flex!important;
+    }
+    .navar {
+        display: none;
+    }
+    
+}
+/*Tablet*/
+@media (max-width: 768px) {
+    .contcontac{
+        display: block;
+        height: auto;
+        width: 100%;
+        padding: 3%;
+    }
+    .continfo{
+        backdrop-filter: blur(90px);
+        width: 60%;
+        height: 30%;
+        margin: auto;
+    }
+    .social{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border-top: #000 2px solid;
+        border-bottom: #000 2px solid;
+        border-left: none;
+        border-right:none;
+    }
+    .frmcontact{
+        margin: auto;
+        width: 100%;
+    }
+    .imgmenu{
+        margin-bottom: 35%;
+        height: auto;
     }
 }
-
+/*Celular*/
 @media (max-width: 576px) {
     *{
         font-size: 10px;
@@ -16,6 +53,3 @@
     }
 }
 
-@media (max-width: 450px) {
-
-}

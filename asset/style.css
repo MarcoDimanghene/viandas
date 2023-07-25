@@ -42,6 +42,11 @@ section{
 .hidden{
     display: none;
 }
+
+.menubars{
+    display: none!important;
+}
+
 .navar{
     margin: auto;
 }
@@ -77,6 +82,7 @@ header .iconshead i{
 }
 .iconshead{
     margin: 0;
+    display: flex;
 }
 header img{
     height: 6em;
@@ -125,7 +131,9 @@ h1{
     border-top: 2px solid darkgrey;
     margin: auto;
 }
-
+.subtmenu{
+    margin: 0 8px;
+}
 
 section i{
     font-size: 2em;
@@ -343,7 +351,7 @@ body{
     border-bottom: 2px darkgreen solid;
     margin: 5px 5px;
     padding: 1%;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 .contfrminput{
     display: flex;
@@ -377,6 +385,10 @@ body{
 }
 .social i:hover {
     color: darkgreen;
+}
+.frmcontact{
+    margin: auto;
+    width: 40%;
 }
 /*----------Footer--------*/
 footer{
