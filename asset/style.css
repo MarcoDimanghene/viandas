@@ -1,10 +1,10 @@
 @font-face {
     font-family: lato-regular;
-    src: url(/font/Lato-Regular.ttf);
+    src: url(/font/latoregular.ttf);
 }
 @font-face {
     font-family: lato-italic;
-    src: url(/font/Lato-Italic.ttf);
+    src: url(/font/latoitalic.ttf);
 }
 
 @keyframes animate {
