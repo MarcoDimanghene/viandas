@@ -24,6 +24,9 @@
         background-image: url(/img/backgroundinfo/6.jpg);
     }
 }
+html{
+    margin: auto;
+}
 
 *{
     padding: 0%;
@@ -42,7 +45,9 @@ section{
 .hidden{
     display: none;
 }
-
+.mostrar {
+    display: flex;
+}
 .menubars{
     display: none!important;
 }
@@ -58,10 +63,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 80%;
     border-bottom: 2px solid rgb(61, 85, 61);
-    max-width: 1400px;
+    max-width: 1200px;
     margin: auto;
+    overflow:hidden;
 }
 header nav a{
     padding: 0.2em 0.5em;
@@ -152,7 +158,6 @@ section i:hover{
 .cards{
     width: 80%;
     height: 300px;
-    position: relative;
     overflow: auto;
     display: flex;
     align-items: center;
@@ -166,7 +171,7 @@ section i:hover{
     display: none;
 }
 .contcard {
-    max-width: 1200px;
+    max-width: 70em;
     margin: auto;
 }
 .card {
@@ -403,7 +408,7 @@ footer{
     position: absolute;
     top: 104px;
     right: 0;
-    display: flex;
+    display: none; /*ARREGLER CARRITO*/
     justify-content: space-around;
     align-items: center;
     flex-direction: column;

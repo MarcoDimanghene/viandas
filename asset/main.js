@@ -93,7 +93,8 @@ const loadHome =(e) => {
 };
 
 const toggleCart = () => {
-    cartMenu.classList.toggle("open-cart");
+    cartMenu.classList.toggle("open-cart")
+    cartMenu.classList.toggle("mostrar");
 };
 
 

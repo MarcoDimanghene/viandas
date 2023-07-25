@@ -3,13 +3,18 @@
         font-size: 15px;
     }
     body{
-        width: 100%;
+        margin: auto;
+        max-width: 1200px;
     }
     .menubars{
         display: flex!important;
     }
     .navar {
         display: none;
+    }
+    .contcard {
+        max-width: 50em;
+        margin: auto;
     }
     
 }
