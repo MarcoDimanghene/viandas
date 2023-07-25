@@ -2,10 +2,6 @@
     *{
         font-size: 15px;
     }
-    body{
-        margin: auto;
-        max-width: 1200px;
-    }
     .menubars{
         display: flex!important;
     }
