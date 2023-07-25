@@ -36,6 +36,10 @@
     color: black;
     margin: 0;
 }
+html{
+    margin: 0 8%;
+    width: 100%;
+}
 section{
     margin: auto;
 }
@@ -402,10 +406,10 @@ footer{
 
 /* Carrito */ 
 .cart {
-    position: absolute;
+
     top: 104px;
     right: 0;
-    display: none; /*ARREGLER CARRITO*/
+    display: flex; /*ARREGLER CARRITO*/
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
@@ -418,7 +422,31 @@ footer{
     transform: translate(200%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
     
+
+    position: fixed;
+
+
+    width: 100vw;
+
+
+
+    opacity: 0;
+    content: '';
+    pointer-events: none;
+
 }
+
+.cart.active{
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+}
+
+.cart.active::after{
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .cart h2{
     font-size: 1.5em;
 }
