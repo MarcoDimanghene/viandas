@@ -62,7 +62,7 @@ header{
     justify-content: space-between;
     width: 80%;
     border-bottom: 2px solid rgb(61, 85, 61);
-    max-width: 1200px;
+    
     margin: auto;
     overflow:hidden;
 }
@@ -95,7 +95,7 @@ header img{
 }
 /*----------Info--------*/
 .info{
-    max-width: 1000px;
+    max-width: 70em;
     height: 350px;
     background-image: url(/img/backgroundinfo/1.jpg);
     background-repeat: no-repeat;
@@ -149,7 +149,7 @@ section i:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 70em;
     margin: auto;
 }
 .cards{
@@ -238,7 +238,7 @@ button:hover{
     display: block;
     align-items: center;
     margin: auto;
-    max-width: 1000px;
+    max-width: 70em;
 }
 .titulos{
     display: flex;
@@ -263,7 +263,7 @@ button:hover{
 }
 .contenedor{
     background-color: #fff;
-    max-width: 1000px;
+    max-width: 70em;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     
@@ -272,7 +272,7 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1000px;
+    max-width: 70em;
     margin: auto;
 }
 .imgmenu1{
@@ -310,7 +310,7 @@ body{
 
 /*----------formulario de contacto--------*/
 .contac{
-    max-width: 1000px;
+    max-width: 70em;
     height: auto;
     margin: auto;
 }
