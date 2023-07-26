@@ -33,20 +33,6 @@
         width: 100%;
         padding: 3%;
     }
-    *{
-        font-size: 12px;
-        margin: 0;
-    }
-    .info p{
-        font-size: 1.5em;
-        width: 70%;
-    }
-    .subt{
-        font-size: 1.2em;
-        text-align: center;
-        margin: 2%;
-        width: auto;
-    }
 
     .continfo{
         backdrop-filter: blur(90px);
