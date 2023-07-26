@@ -24,7 +24,8 @@
     }
       html{
          width: 100%;
-         margin-left: 25px;
+         margin-left: 28px;
+         overflow-x: hidden;
       }
     .continfo{
         backdrop-filter: blur(90px);
