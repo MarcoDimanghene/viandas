@@ -22,6 +22,10 @@
         width: 100%;
         padding: 3%;
     }
+      html{
+         width: 100%;
+         margin: 4%;
+      }
     .continfo{
         backdrop-filter: blur(90px);
         width: 60%;
