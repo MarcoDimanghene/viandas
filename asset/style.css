@@ -98,17 +98,17 @@ header img{
 /*----------Info--------*/
 .info{
     max-width: 1000px;
-    height: 400px;
+    height: 350px;
     background-image: url(/img/backgroundinfo/1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    animation: animate 25s infinite, reverse;
+    animation: animate 10s infinite;
     border-radius: 25px;
 }
 .info p{
-    font-size: 2em;
+    font-size: 1.8em;
     width: 60%;
     height: auto;
     padding: 3%;
