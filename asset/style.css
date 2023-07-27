@@ -39,6 +39,7 @@
 
 section{
     margin: auto;
+    position: relative;
 }
 .hidden{
     display: none;
@@ -63,7 +64,8 @@ header{
     justify-content: space-between;
     border-bottom: 4px solid rgb(61, 85, 61);
     margin: auto;
-    overflow:hidden;
+    position: relative;
+    
 }
 header nav a{
     padding: 0.2em 0.5em;
@@ -81,6 +83,7 @@ header .iconshead i{
     padding: 0 1em;
     font-size: 1.8em;
     color: darkgreen;
+    cursor: pointer;
 }
 .iconshead{
     margin: 0;
@@ -103,7 +106,6 @@ header img{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     animation: animate 25s infinite, reverse;
     border-radius: 25px;
-    
 }
 .info p{
     font-size: 2em;
@@ -214,6 +216,7 @@ img{
     image-orientation: center;
     position: relative;
 }
+
 button{
     width: 125px;
     position: relative;
@@ -306,7 +309,9 @@ body{
     text-align: center;
     margin: 1%;
 }
-
+section i:hover {
+    color: #101010;
+}
 /*----------formulario de contacto--------*/
 .contac{
     max-width: 70em;
@@ -401,40 +406,29 @@ footer{
 
 /* Carrito */ 
 .cart {
-    top: 104px;
+    top: 5px;
+    position: absolute;
+    width: 400px;
     right: 0;
     display: flex; 
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    height: calc(800px - 150px);
+    height: 800px;
     overflow-y: scroll;
     border: 1px solid darkgreen;
-    z-index: 2;
-    min-width: 400px;
+    z-index: 9999;
     background-color: #ffffff;
     transform: translate(200%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-    position: absolute;
-    width: 200px;
-    opacity: 0;
-    content: '';
-    pointer-events: none;
-
-}
-
-.cart.active{
-    visibility: visible;
-    opacity: 1;
-    transform: none;
-}
-
-.cart.active::after{
-    opacity: 1;
-    pointer-events: auto;
+    padding: 50px 30px;
+    gap: 30px;
+    min-width: 375px;
 }
 
 .cart h2{
+    position: relative;
+    top: -110px;
     font-size: 20px;
 }
 .cart-total{
@@ -454,12 +448,24 @@ footer{
     margin-left: 15px;
     font-size: 18px;
 }
-.btn-buy{
-    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#666))
+.mercadotitulos{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    position: relative;
+    top: -30px;
 }
-.btn-delete{
-    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#666))
+.mercadotitulos i{
+    font-size: 30px;
+    color: darkgreen;
 }
+.mercadotitulos i:hover{
+    color: #000;
+    cursor: pointer;
+}
+
+
 
 /*Toggle del carro*/
 .open-cart {

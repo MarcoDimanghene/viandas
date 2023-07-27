@@ -5,7 +5,7 @@ const inicio = document.getElementById('contenedorInicio');
 const h2inicio= document.getElementById('h2inicio');
 const cartMenu = document.querySelector(".cart");
 const cartBtn = document.getElementById("cartbtn");
-
+const cruz = document.getElementById("cruz");
 
 
 //SCROLL
@@ -21,7 +21,7 @@ const scrollRight = () => {
     behavior: 'smooth'
     });
 };
-left.addEventListener('click',(scrollLeft))
+left.addEventListener('click',scrollLeft)
 right.addEventListener('click',scrollRight)
 
 // renderizo el menu en cards
@@ -94,7 +94,11 @@ const loadHome =(e) => {
 
 const toggleCart = () => {
     cartMenu.classList.toggle("open-cart")
-    cartMenu.classList.toggle('active');
+    
+};
+const cruzcarro = () => {
+    cartMenu.classList.remove("open-cart");
+    
 };
 
 
@@ -102,6 +106,6 @@ const init =() =>{
     displayMenu();
     cards.addEventListener('click', loadHome);
     cartBtn.addEventListener('click', toggleCart);
-
+    cruz.addEventListener('click',cruzcarro);
 }
 init()
