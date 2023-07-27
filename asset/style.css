@@ -61,7 +61,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid rgb(61, 85, 61);
+    border-bottom: 4px solid rgb(61, 85, 61);
     margin: auto;
     overflow:hidden;
 }
@@ -149,7 +149,6 @@ section i:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
 }
 
 .cards{
@@ -161,8 +160,9 @@ section i:hover{
     padding: 0 1%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     border-radius: 5%;
-    margin: 5px 0;
+    margin: auto;
     min-width: 250px;
+    max-width: 1200px;
 }
 .cards::-webkit-scrollbar{
     display: none;
@@ -229,7 +229,6 @@ button{
 }
 button:hover{
     background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#666))
-    
 }
 .card:hover{
     background-color: #000000;
@@ -402,14 +401,13 @@ footer{
 
 /* Carrito */ 
 .cart {
-
     top: 104px;
     right: 0;
-    display: flex; /*ARREGLER CARRITO*/
+    display: flex; 
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    height: calc(1000px - 150px);
+    height: calc(800px - 150px);
     overflow-y: scroll;
     border: 1px solid darkgreen;
     z-index: 2;
@@ -417,15 +415,8 @@ footer{
     background-color: #ffffff;
     transform: translate(200%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-    
-
-    position: fixed;
-
-
-    width: 100vw;
-
-
-
+    position: absolute;
+    width: 200px;
     opacity: 0;
     content: '';
     pointer-events: none;
@@ -444,7 +435,7 @@ footer{
 }
 
 .cart h2{
-    font-size: 1.5em;
+    font-size: 20px;
 }
 .cart-total{
     display: flex;
@@ -455,6 +446,21 @@ footer{
     margin: 2%;
     padding: 10%;
 }
+.menucarro{
+    font-size: 18px;
+    font-weight: bold;
+}
+.total{
+    margin-left: 15px;
+    font-size: 18px;
+}
+.btn-buy{
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#666))
+}
+.btn-delete{
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#666))
+}
+
 /*Toggle del carro*/
 .open-cart {
     transform: translate(0%);
