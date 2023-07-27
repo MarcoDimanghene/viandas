@@ -104,7 +104,7 @@ header img{
     background-position: center;
     background-size: cover;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    animation: animate 10s infinite;
+    animation: animate 20s infinite;
     border-radius: 25px;
 }
 .info p{
