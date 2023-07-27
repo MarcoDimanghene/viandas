@@ -424,6 +424,7 @@ footer{
     padding: 50px 30px;
     gap: 30px;
     min-width: 375px;
+    opacity: 0;
 }
 
 .cart h2{
@@ -471,4 +472,7 @@ footer{
 .open-cart {
     transform: translate(0%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+    visibility: visible;
+    opacity: 1;
+    transform: none;
 }
