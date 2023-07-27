@@ -410,7 +410,7 @@ footer{
     position: absolute;
     width: 400px;
     right: 0;
-    display: flex; 
+    display: none; 
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
@@ -419,7 +419,7 @@ footer{
     border: 1px solid darkgreen;
     z-index: 9999;
     background-color: #ffffff;
-    transform: translate(200%);
+    transform: translate(5%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
     padding: 50px 30px;
     gap: 30px;
@@ -428,7 +428,15 @@ footer{
     content: '';
     pointer-events: none;
 }
-
+/*Toggle del carro*/
+.open-cart {
+    display: flex;
+    transform: translate(0%);
+    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+}
 .cart h2{
     position: relative;
     top: -110px;
@@ -470,11 +478,4 @@ footer{
 
 
 
-/*Toggle del carro*/
-.open-cart {
-    transform: translate(0%);
-    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-    visibility: visible;
-    opacity: 1;
-    transform: none;
-}
+

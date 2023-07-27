@@ -98,7 +98,6 @@ const toggleCart = () => {
 };
 const cruzcarro = () => {
     cartMenu.classList.remove("open-cart");
-    
 };
 
 
