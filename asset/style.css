@@ -426,6 +426,7 @@ footer{
     min-width: 375px;
     opacity: 0;
     content: '';
+    pointer-events: none;
 }
 
 .cart h2{
