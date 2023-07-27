@@ -425,6 +425,7 @@ footer{
     gap: 30px;
     min-width: 375px;
     opacity: 0;
+    content: '';
 }
 
 .cart h2{
