@@ -6,6 +6,7 @@ const h2inicio= document.getElementById('h2inicio');
 const cartMenu = document.querySelector(".cart");
 const cartBtn = document.getElementById("cartbtn");
 const cruz = document.getElementById("cruz");
+const overlay = document.querySelector(".overlay")
 
 
 //SCROLL
@@ -94,10 +95,11 @@ const loadHome =(e) => {
 
 const toggleCart = () => {
     cartMenu.classList.toggle("open-cart")
-    
+    overlay.classList.toggle("show-overlay")
 };
 const cruzcarro = () => {
     cartMenu.classList.remove("open-cart");
+    overlay.classList.remove("show-overlay")
 };
 
 
