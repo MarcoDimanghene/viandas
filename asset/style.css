@@ -9,19 +9,19 @@
 
 @keyframes animate {
     20%{
-        background-image: url(/img/backgroundinfo/2.jpg);
+        background-image: url(/img/backgroundinfo/2.png);
     }
     40%{
-        background-image: url(/img/backgroundinfo/3.jpg);
+        background-image: url(/img/backgroundinfo/3.png);
     }
     60%{
-        background-image: url(/img/backgroundinfo/4.jpg);
+        background-image: url(/img/backgroundinfo/4.png);
     }
     80%{
-        background-image: url(/img/backgroundinfo/5.jpg);
+        background-image: url(/img/backgroundinfo/5.png);
     }
     100%{
-        background-image: url(/img/backgroundinfo/6.jpg);
+        background-image: url(/img/backgroundinfo/6.png);
     }
 }
 html {
@@ -51,7 +51,7 @@ section{
     display: flex;
 }
 .menubars{
-    display: none!important;
+    display: none;
 }
 
 .navar{
@@ -76,8 +76,7 @@ header nav a{
     font-size: 1.5em;
     border-radius: 10px;
 }
-header nav a:hover,
-header nav a.active{
+.navar-link:hover{
     background-color: rgb(44, 56, 44);
     color: #fdfdfd;
 }
@@ -98,11 +97,12 @@ header img{
     margin: 0.2em 1em;
     cursor: pointer;
 }
+
 /*----------Info--------*/
 .info{
     max-width: 1000px;
     height: 350px;
-    background-image: url(/img/backgroundinfo/1.jpg);
+    background-image: url(/img/backgroundinfo/1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -427,6 +427,10 @@ footer{
     padding: 50px 30px;
     gap: 30px;
 }
+.disabled{
+    display: none;
+}
+
 /*Toggle del carro*/
 .open-cart {
     display: flex;
@@ -476,9 +480,9 @@ footer{
 
 .overlay {
     position: absolute;
-    top: 65px;
+    top: 108px;
     left: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     z-index: 1; /*Para que quede por encima del resto de las cosas*/
     /*Efecto de Glassmorphismo*/
@@ -490,6 +494,25 @@ footer{
 }
 .show-overlay {
     display: block;
+}
+
+/* MODAL */
+.add-modal {
+    padding: 15px 0px;
+    display: none;
+    align-items: center;
+    color: #fff;
+    background-color: #282828;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 0.5s ease-out;
+    transform: translateY(200%);
+}
+.active-modal {
+    display: flex;
+    transform: translateY(0);
+    transition: all 0.5s ease-in;
 }
 
 

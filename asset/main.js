@@ -3,11 +3,23 @@ const right = document.getElementById('right');
 const cards = document.getElementById('cards');
 const inicio = document.getElementById('contenedorInicio');
 const h2inicio= document.getElementById('h2inicio');
+const barsMenu= document.querySelector('.navar');
 const cartMenu = document.querySelector(".cart");
+const menuBtn =document.querySelector(".menubars");
 const cartBtn = document.getElementById("cartbtn");
 const cruz = document.getElementById("cruz");
-const overlay = document.querySelector(".overlay")
+const overlay = document.querySelector(".overlay");
+const successModal = document.querySelector(".add-modal");
+const deleteBtn = document.querySelector(".btn-delete");
+const buyBtn = document.querySelector(".btn-buy");
 
+// Setear el array para el carro
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Funcion para guardar en el localStorage
+const saveLocalStorage = (cartList) => {
+    localStorage.setItem("cart",JSON.stringify(cartList));
+};
 
 //SCROLL
 const scrollLeft = () => {
@@ -24,6 +36,19 @@ const scrollRight = () => {
 };
 left.addEventListener('click',scrollLeft)
 right.addEventListener('click',scrollRight)
+
+// Funcion para cerrar menu y carrito si scrolleamos
+const closeOnScroll = () => {
+    if (
+        !cartMenu.classList.contains("open-cart") &
+        !barsMenu.classList.contains("open-menu")
+    )
+        return;
+    barsMenu.classList.remove("open-menu")
+    cartMenu.classList.remove("open-cart");
+    overlay.classList.remove("show-overlay");
+};
+
 
 // renderizo el menu en cards
 const displayMenu = () => {
@@ -94,19 +119,52 @@ const loadHome =(e) => {
 };
 
 const toggleCart = () => {
-    cartMenu.classList.toggle("open-cart")
-    overlay.classList.toggle("show-overlay")
+    cartMenu.classList.toggle("open-cart");
+    overlay.classList.toggle("show-overlay");
+};
+const toggleMenu =()=>{
+    barsMenu.classList.toggle("open-menu");
+    overlay.classList.toggle("show-overlay");
 };
 const cruzcarro = () => {
     cartMenu.classList.remove("open-cart");
-    overlay.classList.remove("show-overlay")
+    overlay.classList.remove("show-overlay");
 };
 
+const showSuccessModal =(msg) => {
+    successModal.classList.add ("active-modal");
+    successModal.textContent = msg;
+    setTimeout(()=>{
+        successModal.classList.remove("actvie-modal");
+    },1500);
+};
+const disableBtn= (btn) =>{
+    if(!cart.length) {btn.classList.add("disabled")} else{
+        btn.classList.remove("disabled");
+    }
+};
+
+const closeOnClick= (e) => {
+    if(!e.target.classList.contains("navar-link")) return
+    barsMenu.classList.remove("open-menu");
+    overlay.classList.remove("show-overlay");
+}
+const closeOnOverlayClick =(e)=>{
+    cartMenu.classList.remove("open-cart");
+    barsMenu.classList.remove("open-menu");
+    overlay.classList.remove("show-overlay");
+};
 
 const init =() =>{
     displayMenu();
     cards.addEventListener('click', loadHome);
     cartBtn.addEventListener('click', toggleCart);
+    menuBtn.addEventListener('click', toggleMenu);
     cruz.addEventListener('click',cruzcarro);
+    window.addEventListener('scroll', closeOnScroll);
+    disableBtn(deleteBtn);
+    disableBtn(buyBtn);
+    barsMenu.addEventListener('click',closeOnClick);
+    overlay.addEventListener('click',closeOnOverlayClick);
 }
 init()

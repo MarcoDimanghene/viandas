@@ -4,12 +4,27 @@
         margin: 0;
     }
     .menubars{
-        display: flex!important;
+        display: flex;
     }
-    .navar {
+    .navar{
+        position: absolute;
+        top: 100px;
+        left: 2%;
+        right: 2%;
+        width: 95%;
+        flex-direction: column;
+        background-color: aliceblue;
+        border-top: 0px;
+        border-radius: 0px 0px 15px 15px;
+        align-items: flex-start;
+        padding: 45px 30px;
+        gap: 25px;
+        z-index: 2;
         display: none;
     }
-
+    .open-menu {
+        display: flex;
+    }
     .info{
         width: 90%;
         height: 250px;     
@@ -24,9 +39,10 @@
         margin: 2%;
         width: auto;
     }
+
 }
 /*Tablet*/
-@media (max-width: 768px) {
+@media (max-width: 830px) {
     .contcontac{
         display: block;
         height: auto;
