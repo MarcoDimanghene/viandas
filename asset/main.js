@@ -3,15 +3,17 @@ const right = document.getElementById('right');
 const cards = document.getElementById('cards');
 const inicio = document.getElementById('contenedorInicio');
 const h2inicio= document.getElementById('h2inicio');
+const total = document.querySelector(".total");
 const barsMenu= document.querySelector('.navar');
 const cartMenu = document.querySelector(".cart");
+const productsCart = document.querySelector(".cart-container");
 const menuBtn =document.querySelector(".menubars");
 const cartBtn = document.getElementById("cartbtn");
 const cruz = document.getElementById("cruz");
 const overlay = document.querySelector(".overlay");
-const successModal = document.querySelector(".add-modal");
 const deleteBtn = document.querySelector(".btn-delete");
 const buyBtn = document.querySelector(".btn-buy");
+const successModal = document.querySelector(".add-modal");
 
 // Setear el array para el carro
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -72,12 +74,12 @@ const renderMenu =(menu)=>{
             data-img="${img}"
             data-ingredientes="${ingredientes}"
             data-descripcion="${descripcion}">
-            <h3>$ ${precio}</h3>
+            <h3 class="card-precio">$ ${precio}</h3>
         </div>
         <button class="btn-add"
             data-id='${id}'
             data-name='${name}'
-            data-bid='${precio}'
+            data-precio='${precio}'
             data-img='${img}'>Agregar</button>
     </div>`;
     };
@@ -96,7 +98,7 @@ const renderInicio = (data)=>{
         <button class="btn-add"
         data-id='${id}'
         data-name='${name}'
-        data-bid='${precio}'
+        data-precio='${precio}'
         data-img='${img}'>Agregar</button>
         </div>
     </div>
@@ -132,7 +134,7 @@ const cruzcarro = () => {
 };
 
 const showSuccessModal =(msg) => {
-    successModal.classList.add ("active-modal");
+    successModal.classList.add("active-modal");
     successModal.textContent = msg;
     setTimeout(()=>{
         successModal.classList.remove("actvie-modal");
@@ -154,6 +156,87 @@ const closeOnOverlayClick =(e)=>{
     barsMenu.classList.remove("open-menu");
     overlay.classList.remove("show-overlay");
 };
+//Carrito
+const renderCartProduct= (cartProduct)=>{
+    const {id, name, img, precio, quantity} =cartProduct;
+    return `
+    <div class="cont-cart">
+        <img src="${img}" class="imgmenu5" alt="${name}">
+        <div>
+        <div class="carttxt">
+            <h3 class="namecart">${name}</h3>
+            <p class="txtcart, precio">$ ${precio}</p>
+        <div>
+        <div class="item-handler">
+            <span class="quantity-handler down" data-id=${id}>-</span>
+            <span class="item-quantity">${quantity}</span>
+            <span class="quantity-handler up" data-id=${id}>+</span>
+        </div>
+    </div>
+    `
+};
+
+const renderCart = () => { 
+    if (!cart.length) {
+    productsCart.innerHTML = `<p class="empty-msg">No hay productos en el carrito</p>`;
+    return;
+    }
+    productsCart.innerHTML = cart.map(renderCartProduct).join("");
+};
+
+const getCartTotal= () =>{
+    return cart.reduce((acc, cur) => acc + Number(cur.precio) * cur.quantity,0)
+};
+
+const showTotal = () => {
+    return  cart.reduce = `${getCartTotal().toFixed(2)}`;
+}
+
+const createProducData =(id, name, precio, img) =>{
+    return{id, name, precio, img};
+};
+
+const isExistingCartProduct =(produc) =>{
+    return cart.find((item) => item.id === produc.id);
+};
+//Recorremos el carrito y cuando encuentra el producto el cual agregamos, sumamos una unidad.
+const addUnitToProduct = (product) =>{
+    cart = cart.map((cartProduct) =>{
+        return cartProduct.id === product.id
+        ? {...cartProduct, quantity: cartProduct.quantity + 1}
+        : cartProduct;
+    })
+};
+
+const createCartProduct = (product) => {
+    cart = [...cart, {...product, quantity: 1}];
+};
+
+const checkCartState = () => {
+    saveLocalStorage(cart);
+    renderCart(cart);
+    showTotal(cart);
+    disableBtn(buyBtn);
+    disableBtn(deleteBtn);
+};
+
+const addProduct=(e)=>{
+    if(!e.target.classList.contains("btn-add")) return;
+    const {id, name, precio, img} = e.target.dataset;
+    const produc =createProducData(id, name, precio, img);
+    if (isExistingCartProduct(produc)){
+        //añade
+        addUnitToProduct(produc)
+        //mostrar se agrego
+        showSuccessModal("Se agregó una unidad del producto al carrito");
+    } else{
+        //crear producto
+        createCartProduct(produc)
+        //mostrar que se agrego
+        showSuccessModal("El producto se ha agregado al carrito");
+    }
+    checkCartState();
+};
 
 const init =() =>{
     displayMenu();
@@ -166,5 +249,9 @@ const init =() =>{
     disableBtn(buyBtn);
     barsMenu.addEventListener('click',closeOnClick);
     overlay.addEventListener('click',closeOnOverlayClick);
+    document.addEventListener("DOMContentLoaded", renderCart);
+    document.addEventListener("DOMContentLoaded", showTotal);
+    inicio.addEventListener('click', addProduct);
+    cards.addEventListener('click', addProduct);
 }
 init()

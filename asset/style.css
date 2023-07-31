@@ -303,14 +303,19 @@ body{
     color: #000000;
     text-align: right;
     font-size: 1.5em;
-    text-align: justify;    
+    text-align: left;    
 }
 .precio {
     font-weight: bold;
-    color: darkred;
-    font-size: 1.5em;
+    color: rgb(189, 15, 15);
+    font-size: 2em;
     text-align: center;
-    margin: 1%;
+    margin: 2%;
+}
+.card-precio{
+    color: rgba(2, 235, 60, 0.945);
+    font-size: 1.5em;
+    text-align: left;
 }
 section i:hover {
     color: #101010;
