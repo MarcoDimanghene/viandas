@@ -137,8 +137,9 @@ const showSuccessModal =(msg) => {
     successModal.classList.add("active-modal");
     successModal.textContent = msg;
     setTimeout(()=>{
-        successModal.classList.remove("actvie-modal");
-    },1500);
+        successModal.classList.remove("active-modal");
+    }, 1500);
+    
 };
 const disableBtn= (btn) =>{
     if(!cart.length) {btn.classList.add("disabled")} else{
@@ -189,7 +190,7 @@ const getCartTotal= () =>{
 };
 
 const showTotal = () => {
-    return  cart.reduce = `${getCartTotal().toFixed(2)}`;
+    total.innerHTML= `${getCartTotal().toFixed(2)}`;
 }
 
 const createProducData =(id, name, precio, img) =>{
@@ -238,6 +239,70 @@ const addProduct=(e)=>{
     checkCartState();
 };
 
+//resta
+const substractProductUnit = (existingProduct) =>{
+    cart=cart.map(product =>{
+        return product.id === existingProduct.id ? 
+        {...product,quantity: Number(product.quantity) -1} : product
+    })
+};
+//Borra prodcuto
+const removeProductFromCart = (existingProduct) => {
+    cart = cart.filter((product) => product.id !== existingProduct.id);
+    checkCartState()
+};
+
+const handleMinusBtnEvent =(id)=>{
+    const existingCartProduct = cart.find((item) => item.id === id);
+    if(existingCartProduct.quantity === 1) {
+        if(window.confirm("Desea eliminar el producto")){
+            //borra
+            removeProductFromCart(existingCartProduct);
+        }
+        return
+    }
+    //restar 1
+    substractProductUnit(existingCartProduct);
+};  
+
+const habdlePlusBtnEvent =(id) =>{
+    const existingCartProduct = cart.find((item) => item.id === id);
+    addUnitToProduct(existingCartProduct)
+}
+
+const handleQuantity = (e) =>{
+    if(e.target.classList.contains("down")){
+        handleMinusBtnEvent(e.target.dataset.id)
+    } else if (e.target.classList.contains("up")) {
+        habdlePlusBtnEvent(e.target.dataset.id)
+    }
+    checkCartState()
+};
+
+const resetCartItems = () =>{
+    cart = []
+    checkCartState()
+};
+
+const completeCartAction = (confirmMsg, successMeg) =>{
+    if(!cart.length) return
+    if(window.confirm(confirmMsg)){
+        resetCartItems();
+        alert(successMeg);
+    }
+};
+
+const completeBuey = () => {
+    completeCartAction("¿Desea completar su compra?" , "Gracias por su compra")
+};
+
+const deleteCart = () => {
+    completeCartAction(
+        "¿Desea vaciar el carrito?",
+        "No hay productos en el carrito"
+    );
+};
+
 const init =() =>{
     displayMenu();
     cards.addEventListener('click', loadHome);
@@ -245,13 +310,30 @@ const init =() =>{
     menuBtn.addEventListener('click', toggleMenu);
     cruz.addEventListener('click',cruzcarro);
     window.addEventListener('scroll', closeOnScroll);
-    disableBtn(deleteBtn);
-    disableBtn(buyBtn);
     barsMenu.addEventListener('click',closeOnClick);
     overlay.addEventListener('click',closeOnOverlayClick);
     document.addEventListener("DOMContentLoaded", renderCart);
     document.addEventListener("DOMContentLoaded", showTotal);
     inicio.addEventListener('click', addProduct);
     cards.addEventListener('click', addProduct);
+    productsCart.addEventListener('click', handleQuantity);
+    disableBtn(deleteBtn);
+    disableBtn(buyBtn);
+    buyBtn.addEventListener('click',completeBuey)
+    deleteBtn.addEventListener('click',deleteCart)
+    form.addEventListener('submit', e =>{
+        e.preventDefault()
+    
+        let isUsernameValid = checkName();
+        let isLastnameValid = checkLastName();
+        let isEmailValid = checkEmail();
+        let isPhoneValid = checkPhone();
+    
+        let isFromValid = isUsernameValid && isLastnameValid && isEmailValid && isPhoneValid
+    
+        if (isFromValid){
+            form.submit()
+        }})
 }
+
 init()

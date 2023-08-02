@@ -82,17 +82,29 @@
                 <i class="fa-brands fa-twitter"></i>
                 <i class="fa-brands fa-instagram"></i>
             </div>
-            <form class="frmcontact">
+            <form class="frmcontact" id="form">
                 <div class="contfrminput">
-                    <input class="txtfrm" type="text" placeholder="Nombre">
-                    <input class="txtfrm" type="text" placeholder="Apellido">
+                    <div class="form__field">
+                        <input class="txtfrm success" type="text" placeholder="Nombre" id="name">
+                        <small></small>
+                    </div>
+                    <div class="form__field">
+                        <input class="txtfrm success" type="text" placeholder="Apellido" id="lastname">
+                        <small></small>
+                    </div>
                 </div>
                 <div class="contfrminput">
-                    <input class="txtfrm" type="text" placeholder="Email">
-                    <input class="txtfrm" type="text" placeholder="Telefono">
+                    <div class="form__field">
+                        <input class="txtfrm success" type="text" placeholder="Email" id="email">
+                        <small></small>
+                    </div>
+                    <div class="form__field">
+                        <input class="txtfrm success" type="text" placeholder="Telefono" id="tel">
+                        <small></small>
+                    </div>
                 </div>
-                <textarea class="txtfrm" name="" id="" cols="40" rows="5" placeholder="Comentarios"></textarea>
-                <input class="btnenviar" type="submit" value="Enviar">
+                <textarea class="txtfrm success" name="" id="txtarea" cols="40" rows="5" placeholder="Comentarios"></textarea>
+                <input class="btnenviar success" type="submit" value="Enviar">
             </form>
         </div>
     </section>
@@ -101,5 +113,6 @@
     </footer>
     <script src="./asset/data.js"></script>
     <script src="./asset/main.js"></script>
+    <script src="./asset/formulario.js"></script>
 </body>
 </html>
