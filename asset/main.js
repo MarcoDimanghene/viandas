@@ -169,9 +169,9 @@ const renderCartProduct= (cartProduct)=>{
             <p class="txtcart, precio">$ ${precio}</p>
         <div>
         <div class="item-handler">
-            <span class="quantity-handler down" data-id=${id}>-</span>
-            <span class="item-quantity">${quantity}</span>
-            <span class="quantity-handler up" data-id=${id}>+</span>
+            <p class="quantity-handler down" data-id=${id}> - </p>
+            <p class="item-quantity">${quantity}</p>
+            <p class="quantity-handler up" data-id=${id}> + </p>
         </div>
     </div>
     `

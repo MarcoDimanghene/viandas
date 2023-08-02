@@ -174,7 +174,6 @@ section i:hover{
 }
 .contcard{
     width: 100%;
-    
 }
 
 /*Muesta los menu las tarjetas*/
@@ -435,7 +434,7 @@ footer{
 
 /* Carrito */ 
 .cart{
-    top: 5px;
+    top: 104px;
     position: absolute;
     width: 400px;
     right: 0;
@@ -451,11 +450,51 @@ footer{
     transform: translate(5%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
     padding: 50px 30px;
-    gap: 30px;
+    margin: auto;
+}
+.cart-container{
+    border-top: #000 2px solid;
+    margin: auto;
+    height: 80%;
+    overflow: auto;
+    width: 100%;
+    
+}
+.item-handler{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom:  #000 2px solid;
+    margin: 10px;
 }
 .disabled{
     display: none;
 }
+/* Carrito botones + y menos */
+.up, .down {
+    border-radius: 15px;
+    background-color: #333;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600px;
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+}
+.up:hover{
+    color: #000;
+    background-color: #495e4a;
+}
+.down:hover{
+    color: #000;
+    background-color: #495e4a;
+}
+
+.item-handler{
+    width: 80%;
+    padding: 20px;
+}
+
 
 /*Toggle del carro*/
 .open-cart {
@@ -467,7 +506,7 @@ footer{
 }
 .cart h2{
     position: relative;
-    top: -110px;
+    top: -60px;
     font-size: 20px;
 }
 .cart-total{
