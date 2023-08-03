@@ -191,7 +191,7 @@ const getCartTotal= () =>{
 };
 
 const showTotal = () => {
-    total.innerHTML= `${getCartTotal().toFixed(2)}`;
+    total.innerHTML= `$ ${getCartTotal().toFixed(2)}`;
 }
 
 const createProducData =(id, name, precio, img) =>{

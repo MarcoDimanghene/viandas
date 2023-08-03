@@ -478,7 +478,7 @@ footer{
     display: none;
 }
 .imgmenu5{
-    width: 30%;
+    width: 25%;
     height: auto;
 }
 .txtcart{
@@ -507,7 +507,7 @@ footer{
     background-color: #333;
     font-size: 25px;
     color: #fff;
-    font-weight: 600px;
+    font-weight: bold;
     cursor: pointer;
     width: 50px;
     text-align: center;
@@ -550,12 +550,13 @@ footer{
     padding: 10%;
 }
 .menucarro{
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
 }
 .total{
     margin-left: 15px;
-    font-size: 18px;
+    font-size: 25px;
+    font-weight: bold;
 }
 .mercadotitulos{
     width: 90%;
