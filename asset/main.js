@@ -40,16 +40,16 @@ left.addEventListener('click',scrollLeft)
 right.addEventListener('click',scrollRight)
 
 // Funcion para cerrar menu y carrito si scrolleamos
-const closeOnScroll = () => {
-    if (
-        !cartMenu.classList.contains("open-cart") &
-        !barsMenu.classList.contains("open-menu")
-    )
-        return;
-    barsMenu.classList.remove("open-menu")
-    cartMenu.classList.remove("open-cart");
-    overlay.classList.remove("show-overlay");
-};
+// const closeOnScroll = () => {
+//     if (
+//         !cartMenu.classList.contains("open-cart") &
+//         !barsMenu.classList.contains("open-menu")
+//     )
+//         return;
+//     barsMenu.classList.remove("open-menu")
+//     cartMenu.classList.remove("open-cart");
+//     overlay.classList.remove("show-overlay");
+// };
 
 
 // renderizo el menu en cards

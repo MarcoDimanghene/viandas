@@ -73,9 +73,7 @@
         margin-bottom: 35%;
         height: auto;
     }
-    .total{
-        font-size: 12px;
-    }
+
 }
 /*Celular*/
 @media (max-width: 576px) {
