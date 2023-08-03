@@ -36,14 +36,14 @@ const checkLastName =()=>{
     const userlastname =lastnameInput.value.trim();
 
     if (!isEmpty(userlastname)) {
-        showError(lastnameInput, 'El nombre es obligatorio');
+        showError(lastnameInput, 'El apellido es obligatorio');
     } else if (!isBetween(userlastname.length, min, max)) {
         showError(
-        nameInput,
-        `El nombre no tiene un formato correcto`
+            lastnameInput,
+        `El apellido no tiene un formato correcto`
         );
     } else {
-        showSuccess(nameInput);
+        showSuccess(lastnameInput);
         valid = true;
     }
     

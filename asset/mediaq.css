@@ -60,14 +60,12 @@
         display: flex;
         flex-direction: row;
         width: 100%;
-        border-top: #000 2px solid;
-        border-bottom: #000 2px solid;
-        border-left: none;
-        border-right:none;
+        border: #000 2px solid;
+        padding: 5px;
     }
     .frmcontact{
         margin: auto;
-        width: 100%;
+        width: 50%;
     }
     .imgmenu{
         margin-bottom: 35%;

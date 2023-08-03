@@ -66,7 +66,7 @@ const renderMenu =(menu)=>{
     data-img="${img}"
     data-ingredientes="${ingredientes}"
     data-descripcion="${descripcion}" >
-        <div class"txtmenu">
+        
             <h4>${name}</h4>
             <img src="${img}" class="imgmenu1 selec" alt="${name}" data-id="${id}" 
             data-name="${name}"
@@ -75,8 +75,8 @@ const renderMenu =(menu)=>{
             data-ingredientes="${ingredientes}"
             data-descripcion="${descripcion}">
             <h3 class="card-precio">$ ${precio}</h3>
-        </div>
-        <button class="btn-add"
+        
+        <button class="btn-add botones"
             data-id='${id}'
             data-name='${name}'
             data-precio='${precio}'
@@ -95,7 +95,7 @@ const renderInicio = (data)=>{
         <p class="txtinicio"> <spam class="negrita">Descripción:</spam> ${descripcion}</p>
         <p class="txtinicio"> <spam class="negrita">Ingredientes: </spam>${ingredientes}</p>
         <p class="txtinicio, precio">$ ${precio}</p>
-        <button class="btn-add"
+        <button class="btn-add botones"
         data-id='${id}'
         data-name='${name}'
         data-precio='${precio}'
@@ -142,8 +142,9 @@ const showSuccessModal =(msg) => {
     
 };
 const disableBtn= (btn) =>{
-    if(!cart.length) {btn.classList.add("disabled")} else{
-        btn.classList.remove("disabled");
+    if(!cart.length) {btn.classList.add("disableBtn")} else{
+        btn.classList.remove("btncarro");
+        
     }
 };
 
@@ -310,7 +311,6 @@ const init =() =>{
     cartBtn.addEventListener('click', toggleCart);
     menuBtn.addEventListener('click', toggleMenu);
     cruz.addEventListener('click',cruzcarro);
-    
     barsMenu.addEventListener('click',closeOnClick);
     overlay.addEventListener('click',closeOnOverlayClick);
     document.addEventListener("DOMContentLoaded", renderCart);
@@ -335,6 +335,7 @@ const init =() =>{
     
         if (isFromValid){
             form.submit()
+            form.reset()
         }})
 }
 
