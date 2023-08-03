@@ -162,11 +162,12 @@ const renderCartProduct= (cartProduct)=>{
     const {id, name, img, precio, quantity} =cartProduct;
     return `
     <div class="cont-cart">
-        <img src="${img}" class="imgmenu5" alt="${name}">
-        <div>
-        <div class="carttxt">
-            <h3 class="namecart">${name}</h3>
-            <p class="txtcart, precio">$ ${precio}</p>
+    <h3 class="namecart">${name}</h3>
+        <div class="">
+            <div class="producto-cont">
+            <img src="${img}" class="imgmenu5" alt="${name}">
+            <p class="txtcart">$ ${precio}</p>
+            </div>
         <div>
         <div class="item-handler">
             <p class="quantity-handler down" data-id=${id}> - </p>

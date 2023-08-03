@@ -110,7 +110,7 @@ header img{
     animation: animate 20s infinite;
     border-radius: 25px;
 }
-.info p{
+.subtituloinfo{
     font-size: 1.8em;
     width: 60%;
     height: auto;
@@ -172,9 +172,9 @@ section i:hover{
 .cards::-webkit-scrollbar{
     display: none;
 }
-.contcard{
-    width: 100%;
-}
+
+
+
 
 /*Muesta los menu las tarjetas*/
 .card{
@@ -346,8 +346,8 @@ section i:hover {
     height: 50%;
     margin: auto;
 }
-.continfo p{
-    font-size: 1.5em;
+.txtinfo{
+    font-size: 1.6em;
     color: #fff;
 }
 .contac h3{
@@ -442,7 +442,7 @@ footer{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    height: 800px;
+    height: 900px;
     overflow-y: scroll;
     border: 1px solid darkgreen;
     z-index: 9999;
@@ -450,15 +450,18 @@ footer{
     transform: translate(5%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
     padding: 50px 30px;
-    margin: auto;
+    
 }
 .cart-container{
     border-top: #000 2px solid;
-    margin: auto;
-    height: 80%;
+    height: 90%;
     overflow: auto;
     width: 100%;
     
+}
+.item-quantity{
+    font-size: 25px;
+    font-weight: 600;
 }
 .item-handler{
     display: flex;
@@ -470,11 +473,35 @@ footer{
 .disabled{
     display: none;
 }
+.imgmenu5{
+    width: 30%;
+    height: auto;
+}
+.txtcart{
+    font-size: 20px;
+    font-weight:bold;
+    margin: 5px 0;
+}
+.namecart{
+    font-size: 20px;
+    font-weight:bold;
+    color: #000;
+    margin: 10px 0;
+    text-align: center;
+}
+.carrotitulo{
+    text-align: center;
+}
+.producto-cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 /* Carrito botones + y menos */
 .up, .down {
     border-radius: 15px;
     background-color: #333;
-    font-size: 20px;
+    font-size: 25px;
     color: #fff;
     font-weight: 600px;
     cursor: pointer;
