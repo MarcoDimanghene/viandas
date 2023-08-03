@@ -437,7 +437,6 @@ footer{
 
 /* Carrito */ 
 .cart{
-    top: 104px;
     position: absolute;
     width: 400px;
     right: 0;
