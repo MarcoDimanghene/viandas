@@ -455,7 +455,14 @@ footer{
     padding: 50px 30px;
     
 }
+.cart-container{
+    height: 100%;
+    overflow: auto;
 
+}
+.cont-cart{
+    height: 100%;
+}
 .item-quantity{
     font-size: 25px;
     font-weight: 600;
