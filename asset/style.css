@@ -173,7 +173,10 @@ section i:hover{
     display: none;
 }
 
-
+.contcard{
+    max-width: 1200px;
+    overflow: hidden;
+}
 
 
 /*Muesta los menu las tarjetas*/
@@ -452,13 +455,7 @@ footer{
     padding: 50px 30px;
     
 }
-.cart-container{
-    border-top: #000 2px solid;
-    height: 90%;
-    overflow: auto;
-    width: 100%;
-    
-}
+
 .item-quantity{
     font-size: 25px;
     font-weight: 600;
