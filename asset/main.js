@@ -143,7 +143,7 @@ const showSuccessModal =(msg) => {
 };
 const disableBtn= (btn) =>{
     if(!cart.length) {btn.classList.add("disableBtn")} else{
-        btn.classList.remove("btncarro");
+        btn.classList.remove("disableBtn");
         
     }
 };
