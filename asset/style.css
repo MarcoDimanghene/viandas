@@ -86,6 +86,7 @@ header .iconshead i{
     font-size: 1.8em;
     color: darkgreen;
     cursor: pointer;
+    width: 90%;
 }
 .iconshead{
     margin: 0;
@@ -433,7 +434,7 @@ small{
 /*----------Footer--------*/
 footer{
     height: 200px;
-    width: 100%;
+    width: 90%;
     margin: auto;
     border-top: #000 2px solid;
     margin-top: 20px;
