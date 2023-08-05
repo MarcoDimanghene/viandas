@@ -681,7 +681,7 @@ footer{
     position: absolute;
     top: 108px;
     left: 0;
-    height: 110vh;
+    height: 1500px;
     width: 100%;
     z-index: 1; /*Para que quede por encima del resto de las cosas*/
     /*Efecto de Glassmorphismo*/
@@ -690,6 +690,7 @@ footer{
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     display: none;
+    overflow: hidden;
 }
 .show-overlay {
     display: block;

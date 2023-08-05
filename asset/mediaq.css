@@ -8,10 +8,9 @@
     }
     .navar{
         position: absolute;
-        top: 95px;
+        top: 108%;
         left: 2%;
         right: 2%;
-        
         flex-direction: column;
         background-color: aliceblue;
         border-top: 0px;
