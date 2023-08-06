@@ -153,11 +153,13 @@ const closeOnClick= (e) => {
     if(!e.target.classList.contains("navar-link")) return
     barsMenu.classList.remove("open-menu");
     overlay.classList.remove("show-overlay");
+    menuBtn.classList.remove("active");
 }
 const closeOnOverlayClick =(e)=>{
     cartMenu.classList.remove("open-cart");
     barsMenu.classList.remove("open-menu");
     overlay.classList.remove("show-overlay");
+    menuBtn.classList.remove("active");
 };
 //Carrito
 const renderCartProduct= (cartProduct)=>{
