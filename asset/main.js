@@ -126,6 +126,7 @@ const toggleCart = () => {
 };
 const toggleMenu =()=>{
     barsMenu.classList.toggle("open-menu");
+    menuBtn.classList.toggle("active");
     overlay.classList.toggle("show-overlay");
 };
 const cruzcarro = () => {

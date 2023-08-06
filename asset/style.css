@@ -66,6 +66,8 @@ section{
                 0 0 3px #243f32,
                 0 0 7px #243f32,
                 0 0 15px #243f32;
+    transform: rotate(0);
+    transition: 1s;
 }
 .hamburguer-icon{
     position: relative ;
@@ -75,17 +77,21 @@ section{
     margin: auto;
     display: flex;
     align-items: center;
-    
     border-radius: 3px;
+    transform: rotate(0);
+    transition: 1s;
     
+}
+.active .hamburguer-icon{
+    transform: rotate(315deg);
 }
 .hamburguer-icon span{
     position: absolute;
     display: block;
-
     height: 6px;
     background: linear-gradient(45deg, #243f32, #000);
-    border: 1px solid #fff;
+    transition: .3s;
+    transition-delay: 1s;
     border-radius: 100px;
     margin: 1%;
 }
@@ -93,18 +99,37 @@ section{
     top:0;
     left:0;
     width: 50%;
+    transform: translateY(0);
+}
+.menubars.active span:nth-child(1){
+    width: 100%;
+    transform: translateY(10px);
+    transition-delay: 0s;
+
 }
 .hamburguer-icon span:nth-child(2){
-    
     width: 100%;
-    
+    transform: scalex(1);
+    opacity: 1;
+}
+.menubars.active span:nth-child(2){
+    transform: scalex(0);
+    opacity: 0;
+    transition-delay: 0s;
 }
 .hamburguer-icon span:nth-child(3){
     bottom:0;
     right:0;
     width: 50%;
+    transform: rotate(0);
 }
+.menubars.active span:nth-child(3){
+    bottom:8.5px;
+    width: 100%;
+    transform: rotate(90deg);
+    transition-delay: 0s;
 
+}
 .navar{
     margin: auto;
 }
@@ -161,6 +186,11 @@ header img{
     min-height: 5em;
     margin: 0.2em 1em;
     cursor: pointer;
+    border: #243f32 solid 2px;
+    box-shadow: 0 0 1px #243f32, 
+                0 0 3px #243f32,
+                0 0 7px #243f32,
+                0 0 15px #243f32;
 }
 
 /*----------Info--------*/
