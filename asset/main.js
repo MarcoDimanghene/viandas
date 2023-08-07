@@ -89,7 +89,7 @@ const renderInicio = (data)=>{
     return `
     <div data-id="${id}">
         <h2 class="menutitulo">${name}</h2>
-    <div class="contenedorInicio">
+    <div class="contenedorInicio ">
         <img src="${img}" class="imgmenu" alt="${name}">
         <div>
         <p class="txtinicio"> <spam class="negrita">Descripción:</spam> ${descripcion}</p>
