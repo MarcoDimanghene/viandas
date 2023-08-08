@@ -123,7 +123,7 @@ const creatDataHome = (id, name, precio, img, ingredientes, descripcion) => {
 const renderFilteredProducts = (category) => {
     const menuList = menuData.filter((product) => product.categoria === category);
     cards.innerHTML = menuList.map(renderMenu).join("");
-    console.log(menuList)
+
 };
 
 const changeBtnActiveState =(selectedCategory) =>{
