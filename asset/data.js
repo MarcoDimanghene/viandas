@@ -5,7 +5,8 @@ const menuData=[
         descripcion: 'Nuestro pollo a la parrilla es preparado con pollo frescos, sazonadas con hierbas y especias. Se cocina a la perfección en nuestra parrilla, y se sirve con tu salsa favorita.',
         ingredientes: 'Pollo, aceite de oliva, hierbas aromáticas',
         precio: 2200,
-        img: '/img/polloalaparrilla.jpg'
+        img: '/img/polloalaparrilla.jpg',
+        categoria: 'pollo'
     },
     {
         id:2,
@@ -13,7 +14,8 @@ const menuData=[
         descripcion: 'Un plato saludable y delicioso de pescado fresco, sazonado con hierbas y especias, cocinado a la perfección en nuestro horno',
         ingredientes: 'Pescado, aceite de oliva, verduras',
         precio: 2000,
-        img: '/img/pezcadoalhorno.jpg'
+        img: '/img/pezcadoalhorno.jpg',
+        categoria: 'pescado'
     },
     {
         id:3,
@@ -21,7 +23,8 @@ const menuData=[
         descripcion: 'Pasta clásica italiana hecha con carne de res, tomates, hierbas y especias.',
         ingredientes: 'Pasta, salsa boloñesa, queso parmesano',
         precio: 2100,
-        img: '/img/pastaconsalsa.jpg'
+        img: '/img/pastaconsalsa.jpg',
+        categoria: 'pastas'
     },
     {
         id:4,
@@ -29,7 +32,8 @@ const menuData=[
         descripcion: 'Fresca lechuga romana, crujientes trozos de pan tostado, auténtico aderezo César y parmesano rallado. Un deleite gastronómico en cada bocado.',
         ingredientes: 'Lechufa, crutons, anchoas',
         precio: 1800,
-        img: '/img/ensaladacesar.jpg'
+        img: '/img/ensaladacesar.jpg',
+        categoria: 'ensalada'
     },
     {
         id:5,
@@ -37,7 +41,8 @@ const menuData=[
         descripcion:'Deliciosa hamburguesa artesanal con carne jugosa, queso fundido, crujientes vegetales y nuestra exclusiva salsa secreta. Acompañada de papas fritas doradas y sazonadas. Un placer irresistible para tu paladar. ¡Sabores inigualables!',
         ingredientes: 'Medallones de carne, queso, huevo, jamon, lechuga, tomate',
         precio: 2500,
-        img: '/img/hamburguesa.jpg'
+        img: '/img/hamburguesa.jpg',
+        categoria: 'carne'
     },
     {
         id:6,
@@ -45,7 +50,8 @@ const menuData=[
         descripcion:'Sumérgete en el deleite de nuestro exquisito Risotto de Champiñones. Arroz cremoso y suculento, champiñones frescos, delicado queso parmesano y un toque de hierbas aromáticas. Una experiencia gastronómica inigualable.',
         ingredientes:'Arroz, Champiñones, Cebolla, Parmesano, Vino Blanco',
         precio: 1800,
-        img: '/img/rissoto.jpg'
+        img: '/img/rissoto.jpg',
+        categoria: 'pasta'
     },
     {
         id:7,
@@ -53,7 +59,8 @@ const menuData=[
         descripcion:'Carne jugosa y tierna, sazonada con perfección y cocinada a la parrilla para resaltar su sabor único. Una experiencia gastronómica inolvidable.',
         ingredientes:'Filete fresco de res',
         precio: 2300,
-        img: '/img/filete.jpg'
+        img: '/img/filete.jpg',
+        categoria: 'carne'
     },
     {
         id:8,
@@ -61,7 +68,8 @@ const menuData=[
         descripcion:'Disfruta de la clásica Fettuccine Alfredo. Fideos sedosos bañados en una exquisita salsa de crema y queso parmesano. Una delicia italiana sin igual',
         ingredientes:'Fetuccine, mantequilla, quesos parmesano, queso romano, crema',
         precio: 1500,
-        img: '/img/fettucine.jpg'
+        img: '/img/fettucine.jpg',
+        categoria: 'pasta'
     },
     {
         id:9,
@@ -69,7 +77,8 @@ const menuData=[
         descripcion:'Descubre una experiencia culinaria única en nuestro restaurante, donde el Salmón al Horno con Salsa de Miel y Mostaza es la estrella. Un equilibrio perfecto de sabores, frescura y deleite en cada bocado.',
         ingredientes:'Salmon, miel, mostaza dijon, opcional semillas de sesamo y cilantro',
         precio: 3000,
-        img: '/img/salmon.jpg'
+        img: '/img/salmon.jpg',
+        categoria: 'pescado'
     },
     {
         id:10,
@@ -77,7 +86,8 @@ const menuData=[
         descripcion:'Sumérgete en la tradición italiana en nuestro acogedor restaurante, donde la Lasaña de Carne te deleitará con capas de pasta, sabrosa carne y quesos gratinados. Un auténtico placer culinario.',
         ingredientes:'Carne molida, tomate, pasta, quesos varios',
         precio: 1800,
-        img: '/img/lasana.jpg'
+        img: '/img/lasana.jpg',
+        categoria: 'carne'
     },
 
 ];

@@ -14,6 +14,8 @@ const overlay = document.querySelector(".overlay");
 const deleteBtn = document.querySelector(".btn-delete");
 const buyBtn = document.querySelector(".btn-buy");
 const successModal = document.querySelector(".add-modal");
+const categories = document.querySelector(".categoria");
+const categoriesList = document.querySelectorAll(".iconcat");
 
 // Setear el array para el carro
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -53,6 +55,15 @@ right.addEventListener('click',scrollRight)
 
 
 // renderizo el menu en cards
+const renderProducts = (category = undefined) => {
+    if (!category) {
+        displayMenu();
+        return;
+    }
+    renderFilteredProducts(category);
+};
+
+// muestra el menu
 const displayMenu = () => {
     cards.innerHTML = menuData.map(renderMenu).join("");
     };
@@ -106,10 +117,44 @@ const renderInicio = (data)=>{
 };
 const creatDataHome = (id, name, precio, img, ingredientes, descripcion) => {
     return {id, name, precio, img, ingredientes, descripcion};
-    
-    
-}
-// Cargo el contenedor al ahcer click en la comida-- costo pero se hizo me falto el ; despues del return
+};
+// Filtro por categorias
+
+const renderFilteredProducts = (category) => {
+    const menuList = menuData.filter((product) => product.categoria === category);
+    cards.innerHTML = menuList.map(renderMenu).join("");
+    console.log(menuList)
+};
+
+const changeBtnActiveState =(selectedCategory) =>{
+    const categories =[...categoriesList];
+    categories.forEach((categoryBtn)=>{
+        if(categoryBtn.dataset.category !== selectedCategory){
+            categoryBtn.classList.remove('catactive');
+            return
+        };
+        categoryBtn.classList.add('catactive');
+    })
+};
+
+const changeFiterstate = (e) => {
+    const selectedCategory = e.target.dataset.category;
+    changeBtnActiveState(selectedCategory);
+};
+
+const applyFilter = (e) => {
+    if (!e.target.classList.contains('iconcat')) return;
+    changeFiterstate(e);
+    if (!e.target.dataset.category) {
+      cards.innerHTML = '';
+      renderProducts();
+    } else {
+      renderProducts(e.target.dataset.category);
+    }
+  };
+
+
+// Cargo el contenedor al hacer click en la comida-- costo pero se hizo me falto el ; despues del return
 const loadHome =(e) => {
     if (!e.target.classList.contains("selec")) return;
     const {id, name, precio, img, ingredientes, descripcion} = e.target.dataset;
@@ -309,7 +354,7 @@ const deleteCart = () => {
 };
 
 const init =() =>{
-    displayMenu();
+    renderProducts();
     cards.addEventListener('click', loadHome);
     cartBtn.addEventListener('click', toggleCart);
     menuBtn.addEventListener('click', toggleMenu);
@@ -323,9 +368,9 @@ const init =() =>{
     productsCart.addEventListener('click', handleQuantity);
     disableBtn(deleteBtn);
     disableBtn(buyBtn);
-    buyBtn.addEventListener('click',completeBuey)
-    deleteBtn.addEventListener('click',deleteCart)
-
+    buyBtn.addEventListener('click',completeBuey);
+    deleteBtn.addEventListener('click',deleteCart);
+    categories.addEventListener('click', applyFilter);
     form.addEventListener('submit', e =>{
         e.preventDefault()
     
@@ -339,7 +384,7 @@ const init =() =>{
         if (isFromValid){
             form.submit()
             form.reset()
-        }})
+        }});
 }
 
 init()
